@@ -9,7 +9,7 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final passwordController = TextEditingController();
     final obscurePassword = true.obs;
-    final rememberMe = false.obs;
+    final rememberMe = true.obs;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -70,7 +70,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                       ),
                       const Positioned(
-                        top: 80.0,
+                        top: 90.0,
                         left: 15.0,
                         child: Text(
                           'Fill in the form and login to your account',
