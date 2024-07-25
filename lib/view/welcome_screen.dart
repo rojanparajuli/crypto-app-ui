@@ -1,4 +1,5 @@
 import 'package:crypto/auth/sign_in_screen.dart';
+import 'package:crypto/auth/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -37,12 +38,12 @@ class WelcomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: GestureDetector(
                   onTap: () {
-                    Get.to(() => SignInScreen());
+                    Get.to(() => const SignInScreen());
                   },
                   child: AbsorbPointer(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xFF7ed956),
+                        color: const Color(0xFF7ed956),
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(color: Colors.transparent),
                       ),
@@ -63,7 +64,9 @@ class WelcomeScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(()=>const SignUpScreen());
+                  },
                   child: AbsorbPointer(
                     child: Container(
                       decoration: BoxDecoration(
