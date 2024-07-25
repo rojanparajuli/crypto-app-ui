@@ -1,3 +1,4 @@
+import 'package:crypto/auth/forget_password.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -141,16 +142,21 @@ class SignInScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
-                const Row(
+                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
-                    Text(
-                      'Forgot password',
-                      style: TextStyle(
-                        color: Colors.blue,
-                        decoration: TextDecoration.underline,
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(()=>ForgotPasswordScreen());
+                      },
+                      child: const Text(
+                        'Forgot password',
+                        style: TextStyle(
+                          color: Colors.blue,
+                          decoration: TextDecoration.underline,
+                        ),
                       ),
                     ),
                   ],
