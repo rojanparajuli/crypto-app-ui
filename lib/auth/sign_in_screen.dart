@@ -1,4 +1,5 @@
 import 'package:crypto/auth/forget_password.dart';
+import 'package:crypto/view/finger_print_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -165,7 +166,9 @@ class SignInScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(()=>const AddFingerprintScreen());
+                    },
                     child: Container(
                       decoration: BoxDecoration(
                         color: const Color(0xFF7ed956),
@@ -225,7 +228,7 @@ class SignInScreen extends StatelessWidget {
                             decoration: TextDecoration.underline,
                           ),
                           recognizer: TapGestureRecognizer()..onTap = () {
-                            // Get.to(()=>)
+                            Get.to(()=>const AddFingerprintScreen());
                           },
                         ),
                       ],

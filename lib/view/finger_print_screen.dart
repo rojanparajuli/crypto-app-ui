@@ -1,11 +1,8 @@
-import 'package:crypto/auth/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ForgotPasswordScreen extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController();
-
-  ForgotPasswordScreen({super.key});
+class AddFingerprintScreen extends StatelessWidget {
+  const AddFingerprintScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +20,10 @@ class ForgotPasswordScreen extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 50,),
+          const SizedBox(height: 40,),
           const Column(
             children: [
-              Icon(Icons.lock_open, size: 100, color: Colors.green),
+              Icon(Icons.fingerprint, size: 200, color: Colors.green),
             ],
           ),
           Expanded(
@@ -35,22 +32,18 @@ class ForgotPasswordScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  TextField(
-                    controller: emailController,
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.grey[300],
-                      hintText: 'E-Mail',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none,
-                      ),
+                  const Text(
+                    'Add Your Fingerprint',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
-                      Get.to(ResetPasswordScreen());
+                      Get.snackbar('Info', 'Fingerprint added successfully');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
@@ -60,7 +53,8 @@ class ForgotPasswordScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    child: const Icon(Icons.arrow_forward, color: Colors.white),
+                    child: const Text('Add Fingerprint',
+                        style: TextStyle(color: Colors.white)),
                   ),
                 ],
               ),
