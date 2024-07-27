@@ -1,3 +1,4 @@
+import 'package:crypto/view/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +21,9 @@ class AddFingerprintScreen extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 40,),
+          const SizedBox(
+            height: 40,
+          ),
           const Column(
             children: [
               Icon(Icons.fingerprint, size: 200, color: Colors.green),
@@ -44,6 +47,10 @@ class AddFingerprintScreen extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       Get.snackbar('Info', 'Fingerprint added successfully');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfilePage()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
