@@ -1,4 +1,4 @@
-import 'package:crypto/view/profile_screen.dart';
+import 'package:crypto/view/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -50,7 +50,7 @@ class AddFingerprintScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ProfilePage()));
+                              builder: (context) => FirstNavigation()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
