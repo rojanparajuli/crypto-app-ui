@@ -1,4 +1,5 @@
 import 'package:crypto/controller/navigation_controller.dart';
+import 'package:crypto/view/add_catergory.dart';
 import 'package:crypto/view/expenses_screen.dart';
 import 'package:crypto/view/home_page.dart';
 import 'package:crypto/view/profile_screen.dart';
@@ -38,7 +39,7 @@ class FirstNavigation extends StatelessWidget {
             case 1:
               return ExpensesScreen(); 
             case 2:
-              return Container();
+              return AddCategory();
                case 3:
               return Container();
                case 4:
