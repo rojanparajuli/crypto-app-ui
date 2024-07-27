@@ -3,6 +3,7 @@ import 'package:crypto/view/add_catergory.dart';
 import 'package:crypto/view/expenses_screen.dart';
 import 'package:crypto/view/home_page.dart';
 import 'package:crypto/view/profile_screen.dart';
+import 'package:crypto/view/trasnsaction_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -41,7 +42,7 @@ class FirstNavigation extends StatelessWidget {
             case 2:
               return AddCategory();
                case 3:
-              return Container();
+              return const TransactionPage();
                case 4:
               return ProfilePage();
             default:
